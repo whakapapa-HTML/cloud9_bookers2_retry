@@ -1,0 +1,10 @@
+<%= render 'users/show', user:@user %>
+<%= render 'books/new' , newbook:@newbook %>
+
+<h1>Book Detail</h1>
+<%= @user_book.title %><br/>
+<%= @user_book.body %>
+<%= link_to "Edit", edit_book_path %>
+<%= link_to "Destroy", book_path, method: :delete %>
+
+

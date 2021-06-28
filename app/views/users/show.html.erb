@@ -1,0 +1,10 @@
+<%= render 'users/show', user: @user %>
+<%= render 'books/new' , newbook: @newbook %>
+
+<h1>Books</h1>
+<% @user_books.each do |user_book| %>
+ <li><%= link_to book_path(user_book.id) do %>
+ <%= user_book.title %>
+ <% end %>
+ |<%= user_book.body %></li> 
+<% end %>

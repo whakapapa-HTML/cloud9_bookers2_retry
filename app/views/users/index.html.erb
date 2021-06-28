@@ -1,0 +1,10 @@
+<%= render 'users/show', user:@user %>
+<%= render 'books/new' , newbook:@newbook %>
+
+<h1>Users</h1>
+
+
+<% @users.each do |user| %>
+
+ <li><%= attachment_image_tag user,:profile_image ,:fill,80,80,fallback: 'rails.png'%>|<%= user.name %>|<%= link_to "show", user_path(user.id)%></li> 
+<% end %>
